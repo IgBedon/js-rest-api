@@ -1,9 +1,8 @@
-import { where } from "sequelize";
 import User from "../models/UserModel";
 
 class UserController {
 
-  async index(req, res) {
+  async readAll(req, res) {
     try{
       const users = await User.findAll();
       if(!users) return res.json(null)

@@ -3,7 +3,7 @@ import userController from '../controllers/UserController';
 
 const router = new Router();
 
-router.get('/', userController.index);
+router.get('/', userController.readAll);
 router.post('/', userController.create);
 router.get('/:id', userController.read);
 router.put('/update/:id', userController.update);
